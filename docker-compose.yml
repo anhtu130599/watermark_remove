@@ -1,0 +1,21 @@
+services:
+  watermark-studio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ai-watermark-studio:latest
+    container_name: ai-watermark-studio
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      APP_HOST: "0.0.0.0"
+      APP_PORT: "8000"
+      EXECUTION_BACKEND: "auto"
+      QUANTIZATION_POLICY: "fp16"
+      LOW_MEM_MODE: "true"
+      RAM_BUDGET_GB: "16"
+      AUTO_UNLOAD_SECONDS: "180"
+      MAX_CONCURRENT_JOBS: "1"
+    volumes:
+      - ./backend/models:/app/backend/models
+    restart: unless-stopped
