@@ -35,3 +35,4 @@ backend/models/*
 Thumbs.db
 .vscode/
 .idea/
+/Docs
