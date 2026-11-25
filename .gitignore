@@ -30,13 +30,6 @@ backend/models/*
 !backend/models/manifest.json
 !backend/models/.gitkeep
 
-# Agent State Temp & Locks
-Docs/State/.locks/
-Docs/State/scratch/
-tmp/
-*.tmp
-*.log
-
 # OS / IDE
 .DS_Store
 Thumbs.db
